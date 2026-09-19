@@ -1,0 +1,36 @@
+.card.custom-card {
+    width: 100%;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.card.custom-card .card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+.card.custom-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0px 12px 0 rgba(0, 0, 0, 0.5);
+}
+.card.custom-card .card-body .card-title {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.card.custom-card:active {
+    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.center-text {
+    color: gray;
+    font-size: 1.5rem;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal.custom-modal{
+    background-color: rgba(0, 0, 0, 0.5);
+}
