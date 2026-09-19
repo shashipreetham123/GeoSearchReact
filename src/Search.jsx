@@ -134,8 +134,8 @@ function Search({ countries }) {
                 )}
                 <h2 className="h3 m-3 text-muted">Found {filteredCountries.length} countries</h2>
                 <div className="row">
-                    {filteredCountries.map((country) => (
-                        <div className="col-md-4 col-lg-2 col-12" key={country.codes?.alpha_3}>
+                    {filteredCountries.map((country, i) => (
+                        <div className="col-md-4 col-lg-2 col-12" key={i}>
                             <Card country={country} />
                         </div>
                     ))}

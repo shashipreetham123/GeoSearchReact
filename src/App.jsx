@@ -28,7 +28,15 @@ function App() {
                 )
             );
 
-            setAllCountries(responses.flatMap((response) => response.data.objects));
+            setAllCountries(
+                responses
+                    .flatMap((response) => response.data.objects)
+                    .filter(
+                        (country) =>
+                            typeof country.codes?.alpha_3 === 'string' &&
+                            country.codes.alpha_3.trim() !== ''
+                    )
+            );
             setLoaded(true);
         }
 
@@ -43,8 +51,8 @@ function App() {
         <>
             <Navbar />
             <Routes>
-                <Route path="/" element={<Search countries={allCountries} />} />
-                <Route path="/country/:code" element={<Viewer countries={allCountries} />} />
+                <Route path="/GeoSearchApp/" element={<Search countries={allCountries} />} />
+                <Route path="/GeoSearchApp/country/:code" element={<Viewer countries={allCountries} />} />
             </Routes>
         </>
     );

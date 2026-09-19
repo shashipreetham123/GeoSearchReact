@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Card({ country }) {
     return (
         <Link
-            to={`/country/${country.codes.alpha_3}`}
+            to={`/GeoSearchApp/country/${country.codes.alpha_3}`}
             className="text-decoration-none text-reset"
         >
             <div className="card custom-card">
